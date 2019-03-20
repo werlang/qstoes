@@ -1,0 +1,77 @@
+.select {
+	cursor: pointer;
+	display: block;
+	box-shadow: 1px 1px 2px 0px #000;
+}
+
+.select .selected {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 5px 15px 5px 10px;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 3px;
+
+    background-image: url(../icon/select-arrow.png);
+    background-size: 20px 30px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+	background-color: white;
+	box-shadow: -35px 0px 15px -15px rgba(160,160,160,0.2) inset;
+}
+.select .container{
+	display: none;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+	width: inherit;
+}
+.select .container.down{
+	border-bottom: 1px solid black;
+	box-shadow: 1px 1px 2px 0px #000;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.select .container.up{
+	border-top: 1px solid black;
+	box-shadow: 2px 0px 2px -1px #000;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.select .item-wrapper{
+	display: block;
+	width: 100%;
+	height: 100%;
+	white-space: normal;
+	overflow-x: hidden;
+	max-height: 11em;
+	padding: 1px;
+}
+.select .item {
+	padding: 5px;
+	border: 1px solid rgba(0,0,0,0);
+	display: none;
+}
+.select .item:hover {
+	/*background: linear-gradient( rgba(255,50,50,0.2), rgba(255,150,150,0.2), rgba(255,50,50,0.2));*/
+	background-color: #e5553f;
+	color: white;
+	border: 1px solid rgba(255,0,0,0.2);
+	border-radius: 3px;
+}
+.select .item-search {
+	width: inherit;
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+.select .item-search .red-input{
+	margin: 0px 10px;
+	flex: 1;
+	width: 100%;
+	height: 25px;
+	box-shadow: 0px 0px 2px 0px #000;
+}

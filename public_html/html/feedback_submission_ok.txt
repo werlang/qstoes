@@ -1,0 +1,7 @@
+{{var:nome}},
+
+Parabéns, {{var:prof}} aceitou a questão que você submeteu em {{var:envio}}, e lhe enviou a seguinte mensagem:
+{{var:mensagem}}
+
+Você pode verificar sua questão acessand o link abaixo.
+VER QUESTÃO ({{var:link}})

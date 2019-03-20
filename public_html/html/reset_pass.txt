@@ -1,0 +1,6 @@
+{{var:destinatario}},
+
+Foi requisitado que sua senha fosse alterada. Caso você tenha feito essa requisição, acesse o link abaixo para confirmar o pedido, caso contrário, ignore esta mensagem.
+REDEFINIR SENHA ({{var:link}})
+
+qstoes.tk

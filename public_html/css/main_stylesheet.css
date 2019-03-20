@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.5;	
+}
+body {
+	background-image: url('../backgrounds/background.jpg');
+}
+#frame{
+	background-color: #ddd;
+	width: 100%;
+	padding: 10px;
+	margin: auto;
+	box-shadow: 0px 0px 5px 1px black;	
+}
+#frame-wrapper{
+	margin: auto;
+}
+@media screen and (min-width: 600px) {
+	#frame{
+		width: 600px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 25px;
+		border-radius: 10px;
+	}
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-color: rgba(255,0,0,0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.credits {
+	color: #564f4f;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	
+	flex-direction: column;
+    text-align: center;
+}
+@media screen and (min-width: 600px) {
+	.credits {
+		flex-direction: row;
+		text-align: left;
+	}
+}
+.credits span {
+	margin: 0px 10px;
+}
+.credits a {
+	color: #564f4f;
+	text-decoration: none;
+}
+.credits a:hover {
+	color: #7c2b2b;
+}
+

@@ -1,0 +1,30 @@
+.linha {
+	display: block;
+	width: 100%;
+	padding: 5px 0px 10px 0px;
+}
+.linha label {
+	margin-left: 10px;
+} 
+.linha .red-input {
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+#div-botao{
+	display: flex;
+	justify-content: center;
+}
+.linha .button-red {
+	width: 100%;
+	max-width: 300px;
+	margin-top: 10px;
+}
+@media screen and (min-width: 600px) {
+	#frame{
+		width: 600px;
+		margin-top: 70px;
+		padding: 25px;
+		border-radius: 10px;
+	}
+}

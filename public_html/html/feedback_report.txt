@@ -1,0 +1,9 @@
+{{var:nome}},
+
+{{var:prof}} respondeu à denúncia que você enviou.
+Denúncia enviada em {{var:envio}}
+Motivo: {{var:motivo}}
+Sua mensagem: {{var:mensagem}}
+Resposta: {{var:resposta}}
+
+qstoes.tk

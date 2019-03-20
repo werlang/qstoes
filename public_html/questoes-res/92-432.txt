@@ -1,0 +1,110 @@
+#include<string.h>
+#include<stdio.h>
+
+void myGets(char *str){
+    int i = 0;
+    char c;
+
+    //uso no gladCoding/URI
+    while(scanf("%c",&c) != EOF){
+        str[i] = c;
+        i++;
+    }
+
+/*
+    //uso no codeblocks/devc
+    while(c != 13 && c!= 10){
+        scanf("%c",&c);
+        str[i] = c;
+        i++;
+    }
+*/
+
+    str[i] = '\0';
+}
+
+void myStrcpy(char *str, char *str2){
+    int i = 0;
+    while (str2[i] != '\0'){
+        str[i] = str2[i];
+        i++;
+    }
+    str[i] = '\0';
+}
+
+int myStrlen(char *str){
+    int i = 0;
+    while (str[i] != '\0'){
+        i++;
+    }
+    if (str[i-1] == 10 || str[i-1] == 13)
+        i--;
+    return i;
+}
+
+void myStrcat(char *str, char *str2){
+    int i=myStrlen(str);
+    myStrcpy(str+i, str2);
+}
+
+int myStrcmp(char *str, char *str2){
+    int i;
+    for (i=0 ; i<myStrlen(str) || i<myStrlen(str2); i++){
+        if (str[i] != str2[i]){
+            return str[i] - str2[i];
+        }
+    }
+    return 0;
+}
+
+char *myStrstr(char *str, char *p){
+    int i = 0, j;
+    while (str[i] != '\0'){
+        if (str[i] == *p){ 
+            for (j=0 ; p[j] != '\0' ; j++){
+                if (p[j] != str[i+j])
+                    break;
+            }
+            if (p[j] == '\0')
+                return str+i;
+        }
+        i++;
+    }
+    if (str[i] == '\0')
+        return NULL;
+}
+
+int main() {
+    char frase[100];
+    
+    //gets
+    //myGets(frase);
+    //printf("%s",frase);
+
+    //strcpy
+    //myStrcpy(frase,"teste");
+    //printf("%s",frase);
+
+    //strlen
+    //int t = myStrlen(frase);
+    //printf("%i",t);
+    
+    //strcat
+    //myStrcat(frase, "concatenado");
+    //printf("%s",frase);
+
+    //strcmp
+    //int comp = myStrcmp(frase,"oi");
+    //printf("%i",comp);
+    
+    //strcpy
+    /*
+    char *p = myStrstr(frase, "oi");
+    if (p == NULL)
+        printf("NULL");
+    else
+        printf("%s",p);
+    */
+    
+    return 0;
+}

@@ -1,0 +1,37 @@
+.linha {
+	display: block;
+	width: 100%;
+	padding: 5px 0px 10px 0px;
+}
+.linha label {
+	margin-left: 10px;
+} 
+.linha .red-input {
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+#div-botao{
+	display: flex;
+	justify-content: center;
+}
+.linha .button-red {
+	width: 100%;
+	max-width: 300px;
+	margin-top: 10px;
+}
+#frame h2{
+	margin: 20px 0px 0px 10px;
+}
+.button-opa{
+	margin: 15px 20px;
+}
+@media screen and (min-width: 600px) {
+	#opcoes {
+		display: flex;
+		justify-content: center;
+	}
+	#opcoes .e-card {
+		flex: 1;
+	}
+}

@@ -1,0 +1,16 @@
+{{var:nome_prof}},
+
+Você recebeu um convite de {{var:nome_aluno}} para conhecer o site Qstoes, com a seguinte mensagem:
+
+{{var:mensagem}}
+
+No Qstoes você encontrará ferramentas para facilitar a criação e gerenciamento de listas de exercícios, como por exemplo:
+* Inserção de questões organizadas por diferentes assuntos, separados por disciplinas.
+* Sistema de submissão de questões onde um aluno escreve e envia uma questão de autoria própria, e caso o professor aceite, ela passa a fazer parte do repertório de questões da disciplina.
+* Submissão de resoluções, que possibilita ao aluno enviar sua própria resolução para questões já existentes. Caso o professor aceite, ela passa a ficar disponível para todos alunos que consultarem a questão.
+* Fácil compartilhamento de questões, através de um link único ou do facebook.
+* Sistema de avaliação de questões que permite ao aluno dar seu parecer sobre uma questão existente.
+* Denúncia de questões, que permite ao aluno alertar o professor sobre uma questão duplicada, errada, imprópria ou com link de resolução quebrado.
+
+Aproveite e faça o teste. É grátis!
+CONHECER O QSTOES (http://www.qstoes.tk)

@@ -1,0 +1,60 @@
+.rounded-list {
+    margin: 0;
+    padding: 0;
+	list-style-type: none;
+	counter-reset: li;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.rounded-list li {
+    background-color: #ccc;
+	margin: 5px -10px 20px -10px;
+	padding: 10px;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0);
+	transition: 0.3s all;
+}
+.rounded-list li.active {
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,1);
+	border: 1px solid rgba(0,0,0,.3);
+	background-color: #ddd;
+}
+.rounded-list li:before {
+	counter-increment: li;
+    content: counter(li);
+    position: absolute;
+	border-radius: 2em;
+		border: 5px solid #ddd;
+    background-color: #E87460;
+    font-weight: bold;
+	height: 2em;
+	width: 2em;
+	text-align: center;
+	line-height: 2em;
+	top: 0;
+    left: 0;
+    margin-top: -.8em;
+    margin-left: -.35em;
+	transition: 0.3s all;
+	cursor: default;
+}
+.rounded-list li.active:before {
+    box-shadow: 0px -4px 5px -4px rgba(0,0,0,1);
+	transform: rotate(360deg);
+}
+@media screen and (min-width: 600px) {
+	.rounded-list li {
+		margin: 5px 0px 5px 1em;
+		padding: 10px 10px 10px 1.5em;
+		border-radius: 10px;
+	}
+	.rounded-list li:before {
+		top: 50%;
+		margin-top: -1.3em;
+		margin-left: -1.3em;
+	}
+	.rounded-list li.active:before {
+		box-shadow: -4px 0px 5px -4px rgba(0,0,0,1);
+	}
+}
+

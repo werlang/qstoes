@@ -1,0 +1,252 @@
+#header-toggle{
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 50px;
+	width: 80px;
+	background-image: url(../icon/qstoes_logo_small.png);
+	background-size: 90%;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	opacity: .5;
+	border: 1px solid black;
+    border-radius: 5px;
+    background-color: #faa;
+    z-index: 1;
+}
+#header {
+	color: white;
+	position: fixed;
+	left: 0;
+	right: 0;
+	padding: 0px 5px 5px 0px;
+	text-align: right;
+	z-index: 3;
+	line-height: 50px;
+	background: #d5452f;
+	box-shadow: 0px 0px 20px 0px #000;
+	top: 0;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+#header #logo {
+	width: 50%;
+	text-align: left;
+}
+#header #logo img {
+	height: 43px;
+}
+#header img {
+	height: 30px;
+	vertical-align: middle;
+}
+#header #login-div {
+	margin-left: auto;
+}
+#header #login-div p {
+	display: inline;
+	margin-left: 5px;
+	font-size: 0.875em;
+}
+#header #login-div p span {
+	font-weight: bold;
+	font-size: 1rem;
+}
+#header #login-div #login-button {
+	height: 35px;
+	display: flex;
+	align-items: center;
+	padding: 0px 10px;
+	border: 1px outset rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .1);
+	cursor: pointer;
+}
+#header #contato {
+	width: 50%;
+	padding-left: 30px;
+}
+#header #contato img {
+	margin-left: 5px;
+}
+
+@media screen and (min-width: 600px) {
+	#header {
+		display: flex;
+		padding: 0px 30px 0px 0px;
+	}
+	#header-toggle{
+		display: none;
+	}
+	#header #contato, #header #logo {
+		width: initial;
+	}
+	#header #contato {
+		order: 1;
+	}
+}
+
+#login-frame {
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+	z-index: 3;
+	position:fixed;
+	top: 0;
+	left: 0;
+	background-color: #ccc;
+	color: black;
+	border: 1px solid black;
+	box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+	display: none;
+	font-size: 1.2rem;
+}
+#login-frame h2 {
+	margin: 5px 10px;
+}
+#login-frame label {
+	display: block;
+	margin: 10px 0px 0px 10px;
+}
+#login-frame .red-input {
+	width: 100%;
+}
+#login-frame #pwrong {
+	display: none;
+	color: red;
+	margin: 10px;
+	text-align: center;
+}
+#login-frame .button-red {
+	margin: 15px auto;
+	display: block;
+	width: 100%;
+}
+#login-frame #links {
+	display:flex;
+	justify-content: space-around;
+	font-size: 1rem;
+}
+#login-frame #links a {
+	text-align: center;
+	color: #00a;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+	#login-frame {
+		width: 350px;
+		left: auto;
+		right: 5px;
+		top: 5px;
+		padding: 10px 20px;
+	}
+	#login-frame .container {
+		display: flex;
+		align-items: center;
+	}
+	#login-frame .button-red {
+		flex: 4;
+		margin-left: 10px;
+	}
+	#login-frame #links {
+		flex: 10;
+		flex-direction: column;
+		margin-left: 15px;
+	}
+	#login-frame #links a {
+		text-align: left;
+		margin-top: 5px;
+	}
+}
+
+.popup .window .container {
+	display: flex;
+	justify-content: space-around;
+}
+.popup .window h3{
+	margin: 0px 0px 15px 10px;
+}
+.popup .window p {
+	margin: 0px 0px 15px 10px;
+}
+.popup .window .red-input {
+	width: 100%;
+}
+.popup .window .button-red {
+	padding: 0px 15px;
+	margin-left: 15px;
+	width: 80px;
+}
+
+#fog{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	height: 100%;
+	width: 100%;
+    margin: auto;
+	display: none;
+	background-color: rgba(0, 0, 0, .7);
+	z-index: 2;
+}
+/*
+.subheader {
+	color: white;
+	position: fixed;
+	left: 0;
+	right: 0;
+	text-align: right;
+	z-index: 3;
+	display: none;
+	line-height: 50px;
+}
+.subheader {
+	box-shadow: 0px 0px 25px 0px #000, 0px -10px 15px -10px #555 inset;
+	background-color:rgba(119, 85, 85, .8);
+	top: 50px;
+}
+.subheader div {
+	display: inline-block;
+	height: 100%;
+	
+}
+.subheader > div {
+	vertical-align: middle;
+	margin-right: 30px;
+}
+.subheader div img {
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.subheader div p {
+	vertical-align: middle;
+	padding: 0px;
+	margin: 0;
+	font-size: 14px;
+}
+.subheader div p span {
+	font-weight: bold;
+	font-size: 16px;
+}
+.subheader .title {
+	float:left;
+	margin-left: 50px;
+}
+.subheader .title p {
+	font-size: 20px;
+	font-weight: bold;
+}
+.subheader a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+*/

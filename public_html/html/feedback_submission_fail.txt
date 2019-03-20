@@ -1,0 +1,10 @@
+{{var:nome}},
+
+{{var:prof}} recusou a questão que você submeteu, e lhe enviou a seguinte mensagem:
+{{var:mensagem}}
+
+Enviado em: {{var:envio}}
+Enunciado da questão:
+{{var:texto}}
+
+qstoes.tk

@@ -1,0 +1,360 @@
+#frame-wrapper{
+	margin-bottom: 100px;
+}
+@media screen and (min-width: 900px) {
+	#frame-wrapper {
+		width: 900px;
+	}
+}
+
+.select {
+	width: 100%;
+	margin: auto;
+}
+@media screen and (min-width: 900px) {
+	#frame {
+		width: 900px;
+	}
+	#disciplina-container {
+		display: flex;
+	}
+	#disciplina-container p {
+		flex: 3;
+	}
+	#disciplina-container .select {
+		flex: 4;
+	}
+}
+
+.e-card-container .nao-achou {
+	display: block;
+	margin-left: 15px;
+}
+.e-card-container .item {
+	display: inline-flex;
+	align-items: stretch;
+	border: 1px solid rgba(50,0,0,0.6);
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 1px 1px 3px 0px black;
+	cursor: default;
+	margin: 1px;
+}
+.e-card-container .item .texto {
+	display: inline;
+	padding: 3px;
+	margin: 0px 10px;
+}
+.e-card-container .item .remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25px;
+	transition: .3s background-color;
+}
+.e-card-container .item .remove img {
+	height: 15px;
+	opacity: 0;
+	transition: .3s opacity;
+}
+.e-card-container .item:hover .remove {
+	border-left: 1px solid rgba(50,0,0,0.3);
+}
+.e-card-container .item:hover .remove img {
+	opacity: 1;
+}
+.e-card-container .item .remove:hover {
+	background-color: rgba(255,180,180,0.5);
+	cursor: pointer;
+}
+
+.button-opa {
+	max-width: 300px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.red-input {
+	width: 100%;
+	margin-top: 15px;
+}
+@media screen and (min-width: 900px) {
+	#texto-container {
+		display: flex;
+	}
+	#texto-container #campo-busca{
+		flex: 5;
+		width: auto;
+		margin: 0px 0px 0px 10px;
+	}
+	#texto-container .select{
+		flex: 3;
+		width: auto;
+		margin: 0px 10px 0px 0px;
+	}
+}
+
+#filtro {
+	margin-top: 40px;
+}
+#filtro .linha {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+#filtro #texto-ordem {
+	display: block;
+	white-space: nowrap;
+	margin: 0px 10px;
+}
+#filtro .select {
+	width: 600px;
+}
+@media screen and (min-width: 900px) {
+	#filtro {
+		display: flex;
+	}
+	#filtro .linha {
+		flex: 3;
+	}
+	#texto-ordem {
+		text-align: right;
+	}
+	#filtro .select {
+		width: 250px;
+	}
+	#filtro label{
+		display: block;
+		text-align: center;
+		flex: 5;
+	}	
+}
+
+#button-wrapper{
+	text-align: center;
+}
+#bpesquisa, #p2 {
+	margin: 30px auto 20px auto;
+	max-width: 100%;
+	width: 400px;
+}
+
+.popup .window {
+	overflow-y: auto;
+	max-height: 100%;
+}
+.popup .window .button-red {
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.popup .window h2 {
+	margin: 5px 10px 10px;
+}
+.assunto {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
+.assunto .checkslider.trail{
+	margin: 10px;
+}
+
+#div-questoes .nao-achou {
+	display: block;
+	margin-left: 15px;
+	font-weight: bold;
+}
+.rounded-list .linha {
+	position: relative;
+	padding: 10px 0px 15px 25px;
+	font-size: 1.2rem;
+}
+.rounded-list .linha strong {
+	font-size: 1.6rem;
+}
+.container-rating {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.container-rating .item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.container-rating img {
+	height: 1.5em;
+	margin-right: 10px;
+} 
+.container-rating .rating {
+	border-radius: 8px;
+	color: white;
+	padding: 1px 5px;
+	background-color: #bbb;
+	width: 2.3em;
+	text-align: center;
+	border: 1px solid black;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+}
+
+.rounded-list .assuntos {
+	color: #888;
+	margin-bottom: 15px;
+}
+.rounded-list .assuntos p {
+	margin: 0;
+}
+.rounded-list .assuntos span.added {
+	color: #E87460;
+}
+.rounded-list .assuntos span.removed {
+	color: #E87460;
+	text-decoration: line-through;
+}
+
+.rounded-list .texto {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.rounded-list .imagem {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+.rounded-list .imagem img.icon {
+	max-width: 50%;
+	width: 45px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+	box-shadow: 0px 0px 3px 0px black;
+}
+.rounded-list .imagem .icon.upload {
+	left: 0;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.rounded-list .imagem .icon.delete {
+	right: 0;
+	border-top-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.rounded-list .imagem.removed .grafico {
+	filter: opacity(30%) blur(1px);
+}
+.rounded-list .imagem .grafico {
+	vertical-align: middle;
+	max-width: 100%;
+	border-radius: 5px;
+}
+.rounded-list .imagem .img-container {
+	display: inline-block;
+	position: relative;
+	max-width: 100%;
+	border-radius: 5px;
+	border: 1px solid rgb(100,100,100);
+	box-shadow: 0px 0px 4px 3px rgba(232,116,96,0.5);
+}
+.rounded-list .imagem.selected .icon ,
+.rounded-list .resolucao.selected .icon {
+	display: inline-block;
+}
+
+.rounded-list .imagem.hidden,
+.rounded-list .imagem .icon,
+.rounded-list .imagem.removed .icon.delete,
+.rounded-list .resolucao:not(.selected),
+.rounded-list .resolucao.removed .icon.delete {
+	display: none;
+}
+
+.rounded-list .resolucao {
+	display: flex;
+}
+.rounded-list .resolucao .texto {
+	white-space: nowrap;
+	text-decoration: none;
+}
+.rounded-list .resolucao .icon.upload {
+	margin: 0px 10px 0px 0px;
+}
+.rounded-list .resolucao .icon.delete {
+	margin: 0px 0px 0px 10px;
+}
+.rounded-list .resolucao.changed .texto {
+	color: #E87460;
+}
+.rounded-list .resolucao.removed .texto {
+	color: #E87460;
+	text-decoration: line-through;
+}
+
+.e-button-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-height: 0px;
+	opacity: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+	transition: all .3s;
+}
+.e-button-container.visible {
+	max-height: 110px;
+	opacity: 1;
+	z-index: 2;
+}
+.e-button {
+	flex: 1;
+	max-width: 110px;
+	margin: 5px;
+	border: 1px solid black;
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 1px 1px 3px 0px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	cursor: pointer;
+}
+.e-button img {
+	height: 35px;
+	width: 35px;
+}
+.e-button.disabled img {
+	filter: grayscale(100%) contrast(0%);
+}
+@media screen and (min-width: 900px) {
+	.e-button {
+		background-color: rgba(255,255,255,.95);
+	}
+	.e-button:hover {
+		background-color: rgba(255,230,230,0.9);
+	}
+}
+
+#alteracoes .e-button {
+	max-width: 200px;
+}
+#alteracoes #texto {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px 3px rgb(150,0,0);
+	background-color: rgba(0,0,0,0.15);
+}
+textarea.red-input {
+	margin-top: 0px;
+}

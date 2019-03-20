@@ -1,0 +1,12 @@
+- gerar pdf
+- adicionar mais de uma resolucao
+- disciplina compartilhada
+-videos index alunos
+-adicionar ordenacao personalizada nas disciplinas e listas
+-botao de pesquisar questoes no gerenciamente de listas: fazer algo mais integrado
+
+-verificar loading pra elementos não botão.
+
+-melhorar emails
+-melhorar spam rating dos emails
+-notificacoes no menu sobre quantas resolucoes, etc tem pendentes

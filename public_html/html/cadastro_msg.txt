@@ -1,0 +1,4 @@
+{{var:destinatario}},
+
+Bem-vindo ao Qstoes. Por favor, confirme seu cadastro acessando o link abaixo.
+CONFIRMAR EMAIL ({{var:link}})

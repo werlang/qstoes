@@ -1,0 +1,123 @@
+#frame-wrapper{
+	margin-bottom: 100px;
+}
+@media screen and (min-width: 600px) {
+	#frame-wrapper {
+		margin-bottom: 10px;
+	}
+}
+@media screen and (min-width: 900px) {
+	#frame {
+		width: 900px;
+	}
+}
+.table{
+	margin-top: 15px;
+}
+.table .cell.m-show {
+	width: calc(50% - 2px);
+}
+@media screen and (min-width: 600px) {
+	.table .row .cell:nth-of-type(1){
+		width: 150px;
+	}
+	.table .row .cell:nth-of-type(2){
+		width: 75px;
+	}
+	.table .row .cell:nth-of-type(3){
+		width: 140px;
+	}
+	.table .row .cell:nth-of-type(4){
+		width: 254px;
+	}
+	.table .tbody .row .cell:nth-of-type(4){
+		justify-content: flex-start;
+	}
+}
+@media screen and (min-width: 900px) {
+	.table .row .cell:nth-of-type(3){
+		width: 190px;
+	}
+	.table .row .cell:nth-of-type(4){
+		width: 427px;
+	}
+}
+
+#container-pages {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	align-items: center;
+	background-color: rgba(120,120,120,.1);
+	padding: 2px;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+#container-pages img {
+	height: 35px;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 3px 0px;
+}
+#container-pages img:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+#container-pages #prev {
+	margin-left: 15px;
+}
+#container-pages #next {
+	margin-right: 15px;
+}
+.e-card {
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 1px 1px 3px 0px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	cursor: pointer;
+}
+.e-card img {
+	height: 35px;
+	width: 35px;
+	vertical-align: middle;
+}
+.e-card a {
+	width: 100%;
+	text-align: center;
+}
+.e-card.disabled img {
+	filter: grayscale(100%) contrast(0%);
+}
+#opcoes {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+#opcoes .e-card {
+	flex: 1;
+}
+@media screen and (min-width: 600px) {
+	#opcoes {
+		position: relative;
+		background-color: inherit;
+		margin-top: 20px;
+	}
+}
+.popup .dialog {
+	overflow-y: auto;
+	max-height: 100%;
+}
+.popup .dialog .container{
+	margin-top: 15px;
+}
+.popup .dialog .button-red{
+	width: 120px;
+}

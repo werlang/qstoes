@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/gif" href="icon.png" />
+	<title>Coffee alarm</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">	
+	<link type='text/css' rel='stylesheet' href='coffee.css'/> 
+	<script type="text/javascript" src="coffee.js"></script>
+</head>
+<body>
+	<div id='frame'>
+		<div id='title'><img src='cup.png'><span>Coffee Alarm</span></div>
+		<div>
+			Que horas o café deve ficar pronto?
+			<div id='target'><input class='input' type='text' data-time='715' value='07:15'></div>
+		</div>
+		<div id='option'><label class="switch"><input type="checkbox"><span class="slider round"></span></label>Quero programar minha cafeteira sem ajustar a hora atual dela.</div>
+		<div id='option-show'>
+			Qual a hora que está mostrando na cafeteira?
+			<div><input class='input' type='text' data-time='0' placeholder='00:00'></div>
+		</div>
+		<div id='result'>Programar cafeteira para:</div>
+		<div id='time-wrapper'><div id='time'></div></div>
+	</div>
+	<div id='credit'>Pablo Werlang - <a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></div>
+</body>
+</html>

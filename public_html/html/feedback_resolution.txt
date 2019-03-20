@@ -1,0 +1,6 @@
+{{var:nome}},
+
+{{var:prof}} {{var:status}} a resolução que você submeteu, e lhe enviou a seguinte mensagem:{{var:mensagem}}
+Detalhes da submissão:
+Questão: #{{var:questao}} (qstoes.tk/questao.php?q={{var:questao}})
+Enviado em: {{var:envio}}

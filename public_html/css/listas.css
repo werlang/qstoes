@@ -1,0 +1,238 @@
+#frame-wrapper{
+	margin-bottom: 100px;
+}
+@media screen and (min-width: 600px) {
+	#frame-wrapper {
+		margin-bottom: 10px;
+	}
+}
+@media screen and (min-width: 900px) {
+	#frame {
+		width: 900px;
+	}
+}
+.select {
+	width: 100%;
+	margin: auto;
+}
+@media screen and (min-width: 900px) {
+	#disciplina-container {
+		display: flex;
+	}
+	#disciplina-container p {
+		flex: 3;
+	}
+	#disciplina-container .select {
+		flex: 4;
+	}
+}
+
+
+#opcoes {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+@media screen and (min-width: 600px) {
+	#opcoes {
+		position: relative;
+		background-color: inherit;
+		margin-top: 20px;
+	}
+}
+.e-card {
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 30px;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 1px 1px 3px 0px black;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	cursor: pointer;
+}
+.e-card.hidden {
+	display: none;
+}
+.e-card img {
+	height: 35px;
+	width: 35px;
+}
+.e-card.disabled img {
+	filter: grayscale(100%) contrast(0%);
+}
+
+.popup .dialog #link{
+	box-shadow: 0px 0px 5px 0px black inset;
+	word-wrap: break-word;
+	padding: 10px;
+	background-color: white;
+	border: 2px solid black;
+	margin: 0px;
+	color: red;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.table{
+	margin-top: 20px;
+}
+.table .row.sort-prev,
+.table .row.sort-next {
+	background-color: rgba(200,150,150,0.5);
+	border: 1px solid rgba(190,180,180,0.8);
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.table .row.sort-prev img,
+.table .row.sort-next img{
+	height: 40px;
+}
+
+@media screen and (min-width: 600px) {
+	.table .row .cell:nth-of-type(1){
+		width: 240px;
+	}
+	.table .row .cell:nth-of-type(3){
+		width: 306px;
+	}
+	.table .tbody .row .cell:not(:nth-of-type(2)){
+		justify-content: flex-start;
+	}
+	.table .cell {
+		text-align: left;
+	}
+}
+@media screen and (min-width: 900px) {
+	.table .row .cell:nth-of-type(1){
+		width: 300px;
+	}
+	.table .row .cell:nth-of-type(2){
+		width: 90px;
+	}
+	.table .row .cell:nth-of-type(3){
+		width: 454px;
+	}
+}
+
+.popup .window {
+	overflow-y: auto;
+	max-height: 100%;
+}
+.popup .window h2 {
+	margin: 0px 10px;
+}
+.popup .window p {
+	margin: 5px;
+}
+.popup .window .red-input {
+	width: 100%;
+}
+.popup .window .container{
+	display: flex;
+	justify-content: space-around;
+}
+.popup .window .button-red {
+	padding: .5em 0px;
+	width: 180px;
+}
+.popup .window #botao-salvar{
+	margin-right: 10px;
+	flex: 1;
+}
+.popup .window #edit-salvar{
+	margin-right: 10px;
+	flex: 1;
+}
+.popup .window #edit-questoes{
+	flex: 2;
+}
+.popup .window #botao-pesquisa{
+	flex: 2;
+}
+.popup .window #botao-questoes{
+	min-width: 175px;
+	flex: 1;
+	margin-left: 10px;
+}
+.popup .window #campo-questoes{
+	flex: 1;
+}
+
+#div-questoes  {
+	margin: 15px 0px;
+}
+#div-questoes .item {
+	display: inline-flex;
+	align-items: stretch;
+	border: 1px solid rgba(50,0,0,0.6);
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 1px 1px 3px 0px black;
+	cursor: default;
+	margin: 1px;
+}
+#div-questoes .item.marked {
+	background-color: #D8543F;
+	color: white;	
+}
+#div-questoes .item.removed {
+	opacity: .4;
+}
+#div-questoes .item .texto {
+	display: inline;
+	padding: 3px;
+	margin: 0px 10px;
+}
+#div-questoes .item:hover {
+	border-left: 1px solid rgba(50,0,0,0.3);
+}
+#div-questoes .item.selected {
+	background-color: rgba(255,180,180,0.5);
+	cursor: pointer;
+}
+#div-questoes .item.marked:hover {
+	background-color: rgba(255,180,180,0.8);
+}
+#div-questoes .item.marked.selected:hover {
+	background-color: rgba(255,200,200,0.9);
+}
+
+.window #container-pages {
+	margin-bottom: 5px;
+}
+#container-pages {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	align-items: center;
+	background-color: rgba(120,120,120,.1);
+	padding: 2px;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+#container-pages img {
+	height: 35px;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 3px 0px;
+}
+#container-pages img:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+#container-pages #prev {
+	margin-left: 15px;
+}
+#container-pages #next {
+	margin-right: 15px;
+}
+

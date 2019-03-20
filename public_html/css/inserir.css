@@ -1,0 +1,104 @@
+.select {
+	max-width: 100%;
+	width: 600px;
+	margin: auto;
+}
+@media screen and (min-width: 900px) {
+	.linha {
+		display: flex;
+	}
+	.linha > * {
+		flex: 1;
+	}
+}
+
+textarea.red-input {
+	height: 7em;
+	font-weight: normal;
+	width: 100%;
+}
+
+.button-opa {
+	max-width: 600px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.button-opa .icon.delete {
+	display: none;
+}
+.assunto {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
+@media screen and (min-width: 900px) {
+	#frame {
+		width: 900px;
+	}
+	#divassuntos {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.assunto {
+		width: 50%;
+	}
+}
+.assunto .checkslider.trail{
+	margin: 10px;
+}
+.assunto:hover {
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 5px;
+}
+.assunto .div-icons{
+	display: inline-block;
+	text-align: right;
+}
+.assunto img{
+	height: 30px;
+	width: 30px;
+	background-color: white;
+	border-radius: 10px;
+	vertical-align: middle;
+	display: none;
+	filter: opacity(40%);
+	margin: 2px;
+	padding: 5px;
+}
+.assunto:hover img{
+	display: inline;
+}
+
+#div-botao{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) {
+	#div-botao {
+		flex-direction: row;
+	}
+	#div-botao .button-red {
+		margin: 0px 10px;
+	}
+}
+@media screen and (min-width: 600px) {
+	#div-botao {
+		justify-content: space-around;
+	}
+}
+#inserir-assunto {
+	width: 300px;
+	max-width: 100%;
+	margin-bottom: 15px;
+}
+#inserir-questao {
+	width: 300px;
+	max-width: 100%;
+}
+.popup a {
+	display: block;
+}
