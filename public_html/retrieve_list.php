@@ -28,7 +28,7 @@
 	if ($conn->affected_rows > 0){
 		if (!isset($nome_lista))
 			$nome_lista = "";
-		$link = "http://qstoes.tk/lista.php?$tipo=$info";
+		$link = "http://qstoes.ga/lista.php?$tipo=$info";
 		$msg = "
 			<div id='container-titulo'>
 				<h1>$nome_lista</h1>

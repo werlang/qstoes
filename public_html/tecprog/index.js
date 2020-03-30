@@ -126,13 +126,13 @@ function buildTable(sal, json){
 	
 	$('#b-share-fb').click( function() {
 		var prof = $('#t-profissao').val();
-		var link = 'https://qstoes.tk/tecprog?c='+ prof +'%26s='+ mon;
+		var link = 'https://qstoes.ga/tecprog?c='+ prof +'%26s='+ mon;
 		window.open('https://www.facebook.com/sharer/sharer.php?u='+link, 'facebook-share-dialog', 'width=626,height=436');
 	});
 	
 	$('#b-share-tw').click( function() {
 		var prof = $('#t-profissao').val();
-		var link = 'https://qstoes.tk/tecprog?c='+ prof +'%26s='+ mon;
+		var link = 'https://qstoes.ga/tecprog?c='+ prof +'%26s='+ mon;
 		alert(link);
 		window.open('http://twitter.com/share?text=Veja o salário dos servidores públicos&url='+ link +'&hashtags=tranparencia,salario,governo');
 	});

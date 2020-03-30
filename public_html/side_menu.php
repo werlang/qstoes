@@ -104,7 +104,7 @@
 		<div class='container'>
 			<div id='share-container'>
 				<div class="fb-like" data-href="https://www.facebook.com/qstoes/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Conheça o Qstoes - uma plataforma interativa que gerencia exercícios e suas resoluções &url=http://qstoes.tk">Tweet</a>
+				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Conheça o Qstoes - uma plataforma interativa que gerencia exercícios e suas resoluções &url=http://qstoes.ga">Tweet</a>
 			</div>
 		</div>
 	</div>
