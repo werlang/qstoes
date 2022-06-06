@@ -4,7 +4,7 @@
 
 	$sendername = 'Qstoes';
 	$senderuser = '3d3198fe000a26c2dfb9656b71063111';
-	$senderemail = 'account@qstoes.ga';
+	$senderemail = 'account@qstoes.tk';
 	$senderpassword = '2190e217582a90175cb145e0f97bc03a';
 
 	if ($tipo_email == "feedback_submission"){
@@ -12,7 +12,7 @@
 		$receiveremail = $email;
 		$assunto = "Respota de $titulo $nome_prof";
 		$nome_prof = "$titulo $nome_prof";
-		$link = "http://www.qstoes.ga/questao.php?q=$questao";
+		$link = "http://www.qstoes.tk/questao.php?q=$questao";
 		
 		$doc = new DOMDocument();
 		if ($action == 'aceita'){
@@ -107,7 +107,7 @@
 		$msgbody = $doc->saveHTML();
 		
 		$msgbody = str_replace("{{var:destinatario}}",$receivername,$msgbody);
-		$link = "http://www.qstoes.ga/forgot_pass.php?e=$email&a=$strkey";
+		$link = "http://www.qstoes.tk/forgot_pass.php?e=$email&a=$strkey";
 		$msgbody = str_replace("%7B%7Bvar:link%7D%7D",$link,$msgbody);
 		$msgbody = str_replace("{{var:link}}",$link,$msgbody);
 		
@@ -127,7 +127,7 @@
 		
 		$msgbody = str_replace("{{var:destinatario}}",$receivername,$msgbody);
 		
-		$link = "www.qstoes.ga/create_account.php?e=". $receiveremail ."&a=".$strkey;
+		$link = "www.qstoes.tk/create_account.php?e=". $receiveremail ."&a=".$strkey;
 		$msgbody = str_replace("%7B%7Bvar:link%7D%7D",$link,$msgbody);
 		$msgbody = str_replace("{{var:link}}",$link,$msgbody);
 

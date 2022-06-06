@@ -90,7 +90,7 @@ $(document).ready( function() {
 			var id = $('.table .row.selected').attr('id').match(/\d+/)[0];
 			var url = "lista.php?l=";
 			var link = $('.table .row.selected').attr('data-key');
-			var box = "<h2>Link da lista</h2>www.qstoes.ga/lista.php?l=<a id='link' href='"+url+link+"' target='_blank'>"+link+"</a>";
+			var box = "<h2>Link da lista</h2>www.qstoes.tk/lista.php?l=<a id='link' href='"+url+link+"' target='_blank'>"+link+"</a>";
 			create_popup(box,"dialog",450,null);
 			/*
 			$('.popup .dialog img').click( function(){

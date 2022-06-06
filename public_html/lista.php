@@ -64,7 +64,7 @@
 			
 		</div>
 		<div class='credits'>
-			<span>© 2020 qstoes.ga</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></span>
+			<span>© 2020 qstoes.tk</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></span>
 		</div>
 	</div>
 </body>

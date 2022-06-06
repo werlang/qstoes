@@ -146,7 +146,7 @@ $(document).ready( function() {
 			var id = $('.table .row.selected').attr('id');
 			var url = "gerar.php?d=";
 			var link = $('.table .row.selected').attr('id');
-			var box = "<h2>Link da disciplina</h2>www.qstoes.ga/gerar.php?d=<a id='link' href='"+url+link+"' target='_blank'>"+link+"</a>";
+			var box = "<h2>Link da disciplina</h2>www.qstoes.tk/gerar.php?d=<a id='link' href='"+url+link+"' target='_blank'>"+link+"</a>";
 			create_popup(box,"dialog",450,null);
 			/*
 			$('.popup .dialog img').click( function(){

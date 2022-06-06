@@ -276,7 +276,7 @@ $(document).ready ( function(){
 		if (!$(this).hasClass('disabled')){
 			var id = $('.rounded-list li.active .linha').text().match(/\d+/)[0];
 			var url = "questao.php?q=";
-			var box = "<h2>Link da questão</h2><a id='link' href='"+url+id+"' target='_blank'>www.qstoes.ga/questao.php?q="+id+"</a>";
+			var box = "<h2>Link da questão</h2><a id='link' href='"+url+id+"' target='_blank'>www.qstoes.tk/questao.php?q="+id+"</a>";
 			create_popup(box,"dialog",450,null);
 		}
 	});

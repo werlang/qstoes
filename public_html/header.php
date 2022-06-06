@@ -8,7 +8,7 @@
 		</a>
 	</div>
 	<div id='contato'>
-		<a target='_blank' href='mailto:contato@qstoes.ga'><img src='icon/gmail.png'/></a>
+		<a target='_blank' href='mailto:contato@qstoes.tk'><img src='icon/gmail.png'/></a>
 		<a target='_blank' href='https://www.facebook.com/qstoes/'><img src='icon/facebook2.png'/></a>
 		<a target='_blank' href='https://twitter.com/qstoes'><img src='icon/twitter.png'/></a>
 	</div>

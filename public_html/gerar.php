@@ -69,8 +69,8 @@
 				<div id='container-titulo'>
 					<h1>Pesquisa de questões</h1>
 					<div id='share-container'>
-						<a href='https://twitter.com/share' class='twitter-share-button' data-url='http://qstoes.ga/gerar.php?d=<?php echo "$disciplina" ?>' data-text='Qstoes - <?php echo "$nome_disciplina" ?>'>Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>		
-						<div class='fb-share-button' data-href='http://qstoes.ga/gerar.php?d=<?php echo "$disciplina" ?>' data-layout='button' data-size='small' data-mobile-iframe='true'><a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://qstoes.ga/gerar.php?d=<?php echo "$disciplina" ?>&amp;src=sdkpreparse'>Compartilhar</a></div>
+						<a href='https://twitter.com/share' class='twitter-share-button' data-url='http://qstoes.tk/gerar.php?d=<?php echo "$disciplina" ?>' data-text='Qstoes - <?php echo "$nome_disciplina" ?>'>Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>		
+						<div class='fb-share-button' data-href='http://qstoes.tk/gerar.php?d=<?php echo "$disciplina" ?>' data-layout='button' data-size='small' data-mobile-iframe='true'><a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://qstoes.tk/gerar.php?d=<?php echo "$disciplina" ?>&amp;src=sdkpreparse'>Compartilhar</a></div>
 					</div>
 				</div>
 				
@@ -138,7 +138,7 @@
 			</div>		
 		</div>
 		<div class='credits'>
-			<span>© 2020 qstoes.ga</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></span>
+			<span>© 2020 qstoes.tk</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></span>
 		</div>
 	</div>
 </body>

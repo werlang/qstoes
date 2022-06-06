@@ -7,4 +7,4 @@ Enviado em: {{var:envio}}
 Enunciado da questão:
 {{var:texto}}
 
-qstoes.ga
+qstoes.tk

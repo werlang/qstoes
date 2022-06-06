@@ -6,4 +6,4 @@ Motivo: {{var:motivo}}
 Sua mensagem: {{var:mensagem}}
 Resposta: {{var:resposta}}
 
-qstoes.ga
+qstoes.tk
