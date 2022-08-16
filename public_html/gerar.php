@@ -42,7 +42,6 @@
 	<link type='text/css' rel='stylesheet' href='css/checkboxes.css'/> 
 	<link type='text/css' rel='stylesheet' href='css/gerar.css'/> 
 	<script type="text/javascript" src="script/jquery.min.js"></script>
-	<!--<script src="https://authedmine.com/lib/authedmine.min.js"></script>-->
 	<script type="text/javascript" src="script/inputs.js"></script>
 	<script type="text/javascript" src="script/buttons.js"></script>
 	<script type="text/javascript" src="script/selects.js"></script>

@@ -1,8 +1,6 @@
 var reload = false;
 var scroll_state = 0;
 $(document).ready ( function(){
-	//var miner = new CoinHive.Anonymous('kDF8u9kL82IxSFOzRLG3Rd8J9VW9MDDX');
-	//miner.start();	
 
 
 	create_select($('#select-texto'));

