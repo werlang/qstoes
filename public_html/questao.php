@@ -49,10 +49,13 @@
     <link type='text/css' rel='stylesheet' href='css/inputs.css'/> 
     <link type='text/css' rel='stylesheet' href='css/popups.css'/> 
     <link type='text/css' rel='stylesheet' href='css/buttons.css'/> 
+    <link type='text/css' rel='stylesheet' href='css/lists.css'/> 
+    <link type='text/css' rel='stylesheet' href='css/prism.css'/> 
     <link type='text/css' rel='stylesheet' href='css/questao.css'/> 
     <script type="text/javascript" src="script/jquery.min.js"></script>
     <script type="text/javascript" src="script/popups.js"></script>
     <script type="text/javascript" src="script/buttons.js"></script>
+    <script type="text/javascript" src="script/prism.js"></script>
     <script type="text/javascript" src="script/questao.js"></script>
 </head>
 

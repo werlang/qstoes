@@ -99,8 +99,8 @@
     left: 0;
     background-color: #ccc;
     color: black;
-    border: 1px solid black;
-    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    border: 1px solid rgba(0, 0, 0, 0.391);
+    box-shadow: 2px 2px 5px 0px #00000074;
     display: none;
     font-size: 1.2rem;
 }
@@ -196,57 +196,3 @@
     background-color: rgba(0, 0, 0, .7);
     z-index: 2;
 }
-/*
-.subheader {
-    color: white;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: right;
-    z-index: 3;
-    display: none;
-    line-height: 50px;
-}
-.subheader {
-    box-shadow: 0px 0px 25px 0px #000, 0px -10px 15px -10px #555 inset;
-    background-color:rgba(119, 85, 85, .8);
-    top: 50px;
-}
-.subheader div {
-    display: inline-block;
-    height: 100%;
-    
-}
-.subheader > div {
-    vertical-align: middle;
-    margin-right: 30px;
-}
-.subheader div img {
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 5px;
-}
-.subheader div p {
-    vertical-align: middle;
-    padding: 0px;
-    margin: 0;
-    font-size: 14px;
-}
-.subheader div p span {
-    font-weight: bold;
-    font-size: 16px;
-}
-.subheader .title {
-    float:left;
-    margin-left: 50px;
-}
-.subheader .title p {
-    font-size: 20px;
-    font-weight: bold;
-}
-.subheader a {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-}
-*/

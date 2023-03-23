@@ -58,7 +58,6 @@
     margin-bottom: 10px;
 }
 .popup .dialog #link{
-    box-shadow: 0px 0px 5px 0px black inset;
     word-wrap: break-word;
     padding: 10px;
     background-color: white;
@@ -79,7 +78,6 @@
     margin-left: 5px;
 }
 .popup .dialog .container .button-red {
-    padding: 5px 10px;
     margin: 10px 0px;
     width: auto;
 }
@@ -87,7 +85,6 @@
 .popup .dialog .button-red#page,
 .popup .dialog .button-red#dprof,
 .popup .dialog .button-red#download {
-    padding: 5px 10px;
     margin: 10px 0px;
     width: 100%;
     display: block;

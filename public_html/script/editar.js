@@ -194,7 +194,7 @@ function bind_questoes(){
 			else{
 				var cor = gera_cor((5-parseInt($(this).html()))/4);
 			}
-			$(this).css("background-color", "rgb("+cor[0]+","+cor[1]+","+cor[2]+")");
+			$(this).closest('.item').css("background-color", "rgb("+cor[0]+","+cor[1]+","+cor[2]+")");
 		}
 	});
 

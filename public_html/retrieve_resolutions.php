@@ -62,6 +62,23 @@
 					$buttons_professor = "<div class='button remove-res'><img src='icon/thrash.png' title='Apagar resolução'></div><div class='button choose-res'><img src='icon/check.png' title='Recomendar esta resolução'></div>";
 				}
 				
+				$parts = explode(".", $arquivo);
+				$ext = end($parts);
+				$langList = array(
+					"cpp" => "clike",
+					"c" => "clike",
+					"css" => "css",
+					"html" => "html",
+					"java" => "java",
+					"js" => "javascript",
+					"php" => "php",
+					"py" => "python",
+					"txt" => "markup"
+				);
+				$lang = $langList[$ext];
+
+				$texto = htmlspecialchars($texto);
+				
 				$msg .= "
 					<li id='resolution-$cod' $chosen>
 						<div class='rate-container'>
@@ -75,7 +92,9 @@
 							</div>
 							$buttons_professor
 						</div>	
-						<div class='texto'>$texto</div>
+						<pre class='texto'>
+							<code class='language-$lang'>$texto</code>
+						</pre>
 					</li>
 					<div class='res-info'>Enviado em $envio $nome</div>
 				";
