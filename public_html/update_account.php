@@ -10,12 +10,12 @@
 
 	$titulo = $_POST['titulo'];
 	$email = $_POST['email'];
-	$instituicao = mysqli_real_escape_string($conn, $_POST['instituicao']);
-	$facebook = mysqli_real_escape_string($conn, $_POST['facebook']);
-	$twitter = mysqli_real_escape_string($conn, $_POST['twitter']);
-	$linkedin = mysqli_real_escape_string($conn, $_POST['linkedin']);
-	$newpass = mysqli_real_escape_string($conn, $_POST['new-pass']);
-	$confirmpass = mysqli_real_escape_string($conn, $_POST['confirm-pass']);
+	$instituicao = $_POST['instituicao'];
+	$facebook = $_POST['facebook'];
+	$twitter = $_POST['twitter'];
+	$linkedin = $_POST['linkedin'];
+	$newpass = $_POST['new-pass'];
+	$confirmpass = $_POST['confirm-pass'];
 	
 	$msg = "";
 	
@@ -28,7 +28,7 @@
 				$msg = $conn->error;
 				die('There was an error running the query [' . $conn->error . ']');
 			}
-			$nrows = $result->num_rows;
+			$nrows = $result->rowCount();
 			if ($nrows != 0 && $email != $user)
 				$msg = "email|Este email já possui cadastro";
 		}

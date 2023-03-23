@@ -12,7 +12,7 @@
 			$tipo = "Submissão";
 		}
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
+		$row = $result->fetch();
 		
 		$texto = $row['texto'];
 		

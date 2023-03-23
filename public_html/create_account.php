@@ -8,7 +8,7 @@
 		if ($auth_key != $_GET['a'])
 			header('location:index.php');
 		else{
-			$e = mysqli_real_escape_string($conn, $_GET['e']);
+			$e = $_GET['e'];
 			$sql = "UPDATE professores SET ativo = 1 WHERE email = '". $e ."';";
 			if(!$result = $conn->query($sql)){
 				$msg = $conn->error;
@@ -29,19 +29,19 @@
 			$msg = $conn->error;
 			die('There was an error running the query [' . $conn->error . ']');
 		}
-		$nrows = $result->num_rows;
-		$row = $result->fetch_assoc();
+		$nrows = $result->rowCount();
+		$row = $result->fetch();
 		if ($nrows != 0 && $row['ativo'] == 1)
 			$msg = "email|Este email já possui cadastro";
 		else{
 			if ($_POST['nome'] == "")
 				$msg = "nome|Informe o seu nome";
 			else{
-				$nome = mysqli_real_escape_string($conn, $_POST['nome']);
+				$nome = $_POST['nome'];
 				if ($_POST['sobrenome'] == "")
 					$msg = "sobrenome|Informe o seu nome";
 				else{
-					$sobrenome = mysqli_real_escape_string($conn, $_POST['sobrenome']);
+					$sobrenome = $_POST['sobrenome'];
 					if (strlen(($_POST['lattes'] != 10 && $_POST['lattes']) != 16) || !ctype_alnum($_POST['lattes']))
 						$msg = "lattes|O código da plataforma Lattes inserido é inválido";
 					else{
@@ -54,11 +54,11 @@
 							if ($confirmpass != $newpass)
 								$msg = "confirm-pass|A senha e a confirmação são diferentes";
 							else{
-								$instituicao = mysqli_real_escape_string($conn, $_POST['instituicao']);
-								$facebook = mysqli_real_escape_string($conn, $_POST['facebook']);
-								$twitter = mysqli_real_escape_string($conn, $_POST['twitter']);
-								$linkedin = mysqli_real_escape_string($conn, $_POST['linkedin']);
-								$titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
+								$instituicao = $_POST['instituicao'];
+								$facebook = $_POST['facebook'];
+								$twitter = $_POST['twitter'];
+								$linkedin = $_POST['linkedin'];
+								$titulo = $_POST['titulo'];
 								if ($nrows == 0){
 									$sql = "INSERT INTO professores (email,nome,sobrenome,senha,lattes,titulo,instituicao,facebook,twitter,linkedin) VALUES ('$email','$nome','$sobrenome','". md5($newpass) ."','$lattes','$titulo','$instituicao','$facebook','$twitter','$linkedin')";
 									if(!$result = $conn->query($sql)){ $msg = $conn->error;  die('There was an error running the query [' . $conn->error . ']'.$nrows); }

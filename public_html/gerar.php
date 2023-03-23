@@ -12,7 +12,7 @@
 	$private_key = "a3f05c8283e5350106829f855c93c07d";
 	$sql = "SELECT nome FROM disciplinas WHERE md5(concat('$private_key',md5(cod))) = '$disciplina'";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 	$nome_disciplina = $row['nome'];
 ?>
 

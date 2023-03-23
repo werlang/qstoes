@@ -8,12 +8,12 @@
 
 	$private_key = "a33905b8e53fe71f51962f58de76cbcd";
 	if (isset($_GET['a']) && isset($_GET['e'])){
-		$a = mysqli_real_escape_string($conn, $_GET['a']);
-		$e = mysqli_real_escape_string($conn, $_GET['e']);
+		$a = $_GET['a'];
+		$e = $_GET['e'];
 		$sql = "SELECT * FROM professores WHERE resetpass = '". md5($private_key.$a) ."';";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
-		$nrows = $result->num_rows;
+		$row = $result->fetch();
+		$nrows = $result->rowCount();
 		if ($e == $row['email'] && $nrows!=0){
 			session_start();
 			$_SESSION['user'] = $e;
@@ -28,12 +28,12 @@
 			header('location:index.php');
 		}
 	}
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$email = $_POST['email'];
 		
 	$sql = "SELECT * FROM professores WHERE email = '". $email ."';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
-	$nrows = $result->num_rows;
+	$row = $result->fetch();
+	$nrows = $result->rowCount();
 	if ($nrows == 0)
 		echo "not";
 	else{

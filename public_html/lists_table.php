@@ -7,7 +7,7 @@
 	$public_key = $_POST['disciplina'];
 	$sql = "SELECT cod FROM disciplinas WHERE md5( concat('$private_key',md5(cod)) ) = '$public_key'";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 	$disciplina = $row['cod'];	
 	
 	$limit = $_POST['limit'];
@@ -21,7 +21,7 @@
 	$sql_count = "(SELECT count(*) FROM listas WHERE disciplina = $disciplina) AS qlistas";
 	$sql = "SELECT l.cod as cod, l.nome as nome, l.descricao as descricao, (SELECT count(*) FROM lista_questao WHERE ce_lista = l.cod) as questoes, $sql_count FROM listas l WHERE l.disciplina = $disciplina ORDER BY l.ordem, l.cod LIMIT $limit OFFSET $offset";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	while($row = $result->fetch_assoc()){
+	while($row = $result->fetch()){
 		$cod = $row['cod'];
 		$descricao = $row['descricao'];
 		$nome = $row['nome'];
@@ -38,7 +38,7 @@
 		";
 	}
 	
-	if ($result->num_rows > 0 && $nrows > $limit){
+	if ($result->rowCount() > 0 && $nrows > $limit){
 		$offsetlim = $offset+$limit;
 		$offset_show = $offset+1;
 		$msg .= "

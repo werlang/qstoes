@@ -8,7 +8,7 @@
 	$user = $_SESSION['user'];
 	$sql = "SELECT * FROM professores WHERE email = '$user';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 
 	$titulo = $row['titulo'];
 	$nome = $row['nome'];
@@ -17,7 +17,7 @@
 	$sql = "SELECT * FROM disciplinas WHERE professor = '$email';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
 	$private_key = "a3f05c8283e5350106829f855c93c07d";
-	while($row = $result->fetch_assoc()){
+	while($row = $result->fetch()){
 		$cod = md5( $private_key . md5($row['cod']) );
 		$disciplinas[ $cod ] = $row['nome'];
 	}

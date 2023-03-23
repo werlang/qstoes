@@ -19,7 +19,7 @@
 	//echo $sql;
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
 
-	while($row = $result->fetch_assoc()){
+	while($row = $result->fetch()){
 		$envio = date_format(date_create($row['envio']), 'd/m/Y  H:i');
 		$questao = $row['questao'];
 		$mensagem = $row['mensagem'];
@@ -45,7 +45,7 @@
 		";
 	}
 	
-	if ($result->num_rows > 0 && $nrows > $limit){
+	if ($result->rowCount() > 0 && $nrows > $limit){
 		$offsetlim = $offset+$limit;
 		$offset_show = $offset+1;
 		$msg .= "

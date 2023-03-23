@@ -15,7 +15,7 @@
 
 	$sql = "SELECT * FROM professores WHERE email = '". $_SESSION['user'] ."';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 
 	$titulo = $row['titulo'];
 	$nome = $row['nome'];

@@ -48,7 +48,7 @@
 					$sql = "INSERT INTO avaliacoes (questao,dificuldade,elaboracao) VALUES ('$questao','$dificuldade','$elaboracao')";
 				if(!$result = $conn->query($sql)){die('There was an error running the query [' . $conn->error . ']');}
 				
-				$cookie_cod = $conn->insert_id;
+				$cookie_cod = $conn->lastInsertId();
 				$cookie_name = 'qstoes_aval'.$questao;
 				$cookie_value = "$dificuldade|$elaboracao|$cookie_cod";
 				setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day

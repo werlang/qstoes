@@ -8,7 +8,7 @@
 	$user = $_SESSION['user'];
 	$sql = "SELECT * FROM professores WHERE email = '$user';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 
 	$titulo = $row['titulo'];
 	$nome = $row['nome'];
@@ -16,7 +16,7 @@
 	
 	$sql = "SELECT * FROM disciplinas WHERE professor = '$email';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	while($row = $result->fetch_assoc()){
+	while($row = $result->fetch()){
 		$disciplinas[ $row['cod'] ] = $row['nome'];
 	}
 ?>

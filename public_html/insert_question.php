@@ -6,17 +6,17 @@
 	if(!$result = $conn->query($sql)){
 		die('There was an error running the query [' . $conn->error . ']');
 	}
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 	$disciplina = $row['cod'];
 	$email = $row['email'];
 	$nome = $row['titulo']. " " .$row['nome'];
 
-	$texto = mysqli_real_escape_string($conn, $_POST['texto']);
+	$texto = $_POST['texto'];
 	$sql = "INSERT INTO questoes (texto,disciplina) VALUES ('$texto','$disciplina');";
 	if(!$result = $conn->query($sql)){
 		die('There was an error running the query [' . $conn->error . ']');
 	}
-	$codq = $conn->insert_id;
+	$codq = $conn->lastInsertId();
 	$sql = "INSERT INTO assunto_questao (ce_assunto, ce_questao) VALUES ";
 	$first = true;
 	foreach ($_POST['assunto'] as $assunto){
@@ -32,7 +32,7 @@
 	
 	$sql = "INSERT INTO resolucoes (questao,envio,nome,email) VALUES ('$codq',now(),'$nome','$email');";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']');}
-	$codr = $conn->insert_id;
+	$codr = $conn->lastInsertId();
 	
 	$foldername = "questoes-res";
 	$cod = "$codq-$codr";

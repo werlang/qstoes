@@ -255,7 +255,7 @@ function send_resolution_box(){
 				processData: false,  // tell jQuery not to process the data
 				contentType: false   // tell jQuery not to set contentType
 			}).done(function( data ) {
-				//alert(data);
+				// console.log(data);
 				if (data == "enviado"){
 					$('.popup').click();
 					show_message("A resolução foi enviada e está aguardando avaliação");

@@ -5,13 +5,13 @@
 		unset($_SESSION['user']);
 		header('location:index.php');
 	}
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$email = $_POST['email'];
 	$senha = md5($_POST['senha']);
 	
 	$sql = "SELECT * FROM professores WHERE email = '$email' AND senha = '$senha';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
-	$nrows = $result->num_rows;
+	$row = $result->fetch();
+	$nrows = $result->rowCount();
 	if ($nrows == 0){
 		unset($_SESSION['changepass']);
 		unset($_SESSION['changeemail']);

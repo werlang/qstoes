@@ -1,16 +1,18 @@
 <?php
 	include_once "connection.php";
 	session_start();
-	$user = mysqli_real_escape_string($conn, $_POST['user']);
+	$user = $_POST['user'];
 	$pass = md5($_POST['pass']);
 
-	$sql = "SELECT count(*), ativo FROM professores WHERE email = \"". $user ."\" and senha = \"". $pass ."\";";
-	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
-	$nrows = $row['count(*)'];
+	$sql = "SELECT count(*) AS total, ativo FROM professores WHERE email = ? and senha = ?;";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute([$user, $pass]);
+
+	$row = $stmt->fetch();
+	$nrows = $row['total'];
 	
 	if ($nrows == 0){
-		//echo 'Usuário e senha incorretos.';
+		//echo 'Usuï¿½rio e senha incorretos.';
 		unset($_SESSION['user']);
 		echo "errado";	
 	}
@@ -21,7 +23,7 @@
 			echo "certo";
 		}
 		else{
-			//echo 'Conta não ativada.';
+			//echo 'Conta nï¿½o ativada.';
 			unset($_SESSION['user']);
 			echo "inativo";	
 		}

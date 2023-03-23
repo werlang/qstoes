@@ -27,7 +27,7 @@
 				$order2 = $order1 + 1;
 			$sql = "SELECT cod FROM listas WHERE ordem = $order2";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-			$row = $result->fetch_assoc();
+			$row = $result->fetch();
 			$id2 = $row['cod'];	
 			
 			$sql = "UPDATE listas SET ordem = $order2 WHERE cod = $id1";
@@ -45,24 +45,24 @@
 		$public_key = $_POST['disciplina'];
 		$sql = "SELECT cod FROM disciplinas WHERE md5( concat('$private_key',md5(cod)) ) = '$public_key'";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
+		$row = $result->fetch();
 		$disciplina = $row['cod'];	
 		$info = $_POST['info'];
 		
 		if ($_POST['action'] == 'insert'){
-			$nome = mysqli_real_escape_string($conn, $info[0]);
-			$descricao = mysqli_real_escape_string($conn, $info[1]);
+			$nome = $info[0];
+			$descricao = $info[1];
 			$questoes = $_POST['questoes'];
 			
 			$sql = "SELECT count(*) FROM listas WHERE disciplina = $disciplina";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-			$row = $result->fetch_assoc();
+			$row = $result->fetch();
 			$linha = $row['count(*)'] + 1;	
 
 			$sql = "INSERT INTO listas (nome, descricao, disciplina, ordem) VALUES ('$nome','$descricao','$disciplina','$linha');";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
 			
-			$cod = $conn->insert_id;
+			$cod = $conn->lastInsertId();
 			$sql = "INSERT INTO lista_questao (ce_lista, ordem, ce_questao) VALUES ";
 			$first = true;
 			$ordem = 1;
@@ -80,9 +80,9 @@
 			echo "inserido";
 		}
 		elseif ($_POST['action'] == 'rename'){
-			$nome = mysqli_real_escape_string($conn, $info[0]);
-			$descricao = mysqli_real_escape_string($conn, $info[1]);
-			$cod = mysqli_real_escape_string($conn, $info[2]);
+			$nome = $info[0];
+			$descricao = $info[1];
+			$cod = $info[2];
 
 			$sql = "UPDATE listas SET nome = '$nome', descricao = '$descricao' WHERE cod = $cod";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }

@@ -1,8 +1,8 @@
 <?php
 	include_once "connection.php";
-	$mensagem = mysqli_real_escape_string($conn, $_POST['mensagem']);
-	$nome = mysqli_real_escape_string($conn, $_POST['nome']);
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$mensagem = $_POST['mensagem'];
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
 	$cod_questao = $_POST['questao'];
 	$motivo = $_POST['motivo'];
 	

@@ -4,7 +4,7 @@
 	$user = $_SESSION['user'];
 	$private_key = "a3f05c8283e5350106829f855c93c07d";
 	if ($_POST['action'] == 'insert'){
-		$newdisc = mysqli_real_escape_string($conn, explode("|",$_POST['info'])[1]);
+		$newdisc = explode("|",$_POST['info'])[1];
 		if ($newdisc == "")
 			echo "vazio";
 		else{
@@ -15,13 +15,13 @@
 				$public_disc = 0;
 			$sql = "SELECT * FROM disciplinas WHERE professor = '$user' AND nome = '$newdisc'";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-			if ($result->num_rows != 0){
+			if ($result->rowCount() != 0){
 				echo "vazio";
 			}
 			else{
 				$sql = "INSERT INTO disciplinas (nome, professor, publica) VALUES ('$newdisc','$user','$public_disc');";
 				if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-				$cod = $conn->insert_id;
+				$cod = $conn->lastInsertId();
 				$sql = "INSERT INTO professor_disciplina (professor, disciplina) VALUES ('$user','$cod');";
 				if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
 				echo "inserido";
@@ -32,7 +32,7 @@
 		$public_key = $_POST['info'];
 		$sql = "SELECT cod FROM disciplinas WHERE md5( concat('$private_key',md5(cod)) ) = '$public_key'";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
+		$row = $result->fetch();
 		$cod = $row['cod'];
 		
 		$sql = "DELETE FROM assunto_questao WHERE ce_questao IN (SELECT cod FROM questoes WHERE disciplina = '$cod');";
@@ -49,7 +49,7 @@
 
 		$sql = "SELECT arquivo FROM resolucoes WHERE questao IN (SELECT cod FROM questoes WHERE disciplina = '$cod');";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		while($row = $result->fetch_assoc()){
+		while($row = $result->fetch()){
 			if ($row['arquivo'] != "")
 				unlink($row['arquivo']);
 		}
@@ -61,7 +61,7 @@
 
 		$sql = "SELECT resolucao FROM submissoes WHERE disciplina = '$cod';";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		while($row = $result->fetch_assoc()){
+		while($row = $result->fetch()){
 			if ($row['resolucao'] != "")
 				unlink($row['resolucao']);
 		}
@@ -89,7 +89,7 @@
 		$public_key = explode("|",$_POST['info'])[0];
 		$sql = "SELECT cod FROM disciplinas WHERE md5( concat('$private_key',md5(cod)) ) = '$public_key'";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
+		$row = $result->fetch();
 		$cod = $row['cod'];
 
 		$public_disc = explode("|",$_POST['info'])[1];
@@ -98,12 +98,12 @@
 		else
 			$public_disc = 0;
 		$name = explode("|",$_POST['info'])[2];
-		$name = mysqli_real_escape_string($conn, $name);
+		$name = $name;
 
 		if ($name == "")
 			echo "vazio";
 		else{
-			$name = mysqli_real_escape_string($conn, $name);
+			$name = $name;
 
 			$sql = "UPDATE disciplinas SET nome = '$name', publica = '$public_disc' WHERE cod = '$cod';";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }

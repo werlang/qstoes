@@ -5,7 +5,7 @@
 	$field = $_POST['field'];
 	
 	if ($field == 'texto'){
-		$enunciado = mysqli_real_escape_string($conn, $_POST['info']);
+		$enunciado = $_POST['info'];
 		$sql = "UPDATE questoes SET texto = '$enunciado' WHERE cod = '$cod'";
 		if(!$result = $conn->query($sql)){
 			die('There was an error running the query [' . $conn->error . ']');
@@ -49,12 +49,12 @@
 			$email = $_SESSION['user'];
 			$sql = "SELECT nome, titulo FROM professores WHERE email = '$email'";
 			if(!$result = $conn->query($sql)){die('There was an error running the query [' . $conn->error . ']');}
-			$row = $result->fetch_assoc();
+			$row = $result->fetch();
 			$nome = $row['titulo']. " " .$row['nome'];
 			
 			$sql = "INSERT INTO resolucoes (questao,envio,email,nome) VALUES ('$cod_questao',now(),'$email','$nome')";
 			if(!$result = $conn->query($sql)){die('There was an error running the query [' . $conn->error . ']');}
-			$cod_resolucao = $conn->insert_id;
+			$cod_resolucao = $conn->lastInsertId();
 			
 			$cod = "$cod_questao-$cod_resolucao";
 			$resolucao = "$foldername/$cod.$extension";
@@ -67,8 +67,8 @@
 	elseif ($field == 'remove-resolucao'){
 		$sql = "SELECT arquivo FROM resolucoes WHERE cod = '$cod'";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		if ($result->num_rows > 0){
-			$row = $result->fetch_assoc();
+		if ($result->rowCount() > 0){
+			$row = $result->fetch();
 			unlink($row['arquivo']);
 			$sql = "DELETE FROM resolucoes WHERE cod = '$cod'";
 			if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
@@ -88,8 +88,8 @@
 		if(!$result = $conn->query($sql)){
 			die('There was an error running the query [' . $conn->error . ']');
 		}
-		if ($result->num_rows > 0){
-			while($row = $result->fetch_assoc()){
+		if ($result->rowCount() > 0){
+			while($row = $result->fetch()){
 				if (isset($row['arquivo']))
 					unlink($row['arquivo']);
 			}
@@ -102,8 +102,8 @@
 		if(!$result = $conn->query($sql)){
 			die('There was an error running the query [' . $conn->error . ']');
 		}
-		if ($result->num_rows > 0){
-			$row = $result->fetch_assoc();
+		if ($result->rowCount() > 0){
+			$row = $result->fetch();
 			if (isset($row['imagem']))
 				unlink($row['imagem']);
 			$sql = "DELETE FROM questoes WHERE cod = '$cod'";

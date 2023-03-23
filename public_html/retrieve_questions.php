@@ -1,12 +1,12 @@
 <?php
 	include_once "connection.php";
-	$texto = mysqli_real_escape_string($conn, $_POST['campo-busca']);
+	$texto = $_POST['campo-busca'];
 	
 	$private_key = "a3f05c8283e5350106829f855c93c07d";
 	$public_key = $_POST['disciplina'];
 	$sql = "SELECT cod FROM disciplinas WHERE md5( concat('$private_key',md5(cod)) ) = '$public_key'";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 	$disc = $row['cod'];	
 	
 	if (isset($_POST['assunto-e']))
@@ -105,14 +105,14 @@
 	if(!$result = $conn->query($sql)){
 		die('There was an error running the query [' . $conn->error . ']');
 	}
-	$affected = $conn->affected_rows;
+	$affected = $result->rowCount();
 	if ($affected == 0){
 		echo 'NADA';
 	}
 	else {
 		if ($offset == 0)
 			echo "<ol class='rounded-list'>";
-		while($row = $result->fetch_assoc()){
+		while($row = $result->fetch()){
 			echo item_lista($row);
 		}
 		if ($offset == 0)

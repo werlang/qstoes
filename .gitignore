@@ -1,2 +1,4 @@
 .conf
 cwp_stats
+config.json
+.env

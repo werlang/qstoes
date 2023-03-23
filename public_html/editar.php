@@ -9,7 +9,7 @@
 	$private_key = "a3f05c8283e5350106829f855c93c07d";
 	$sql = "SELECT * FROM professores WHERE email = '$user';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 
 	$titulo = $row['titulo'];
 	$nome = $row['nome'];
@@ -17,7 +17,7 @@
 	
 	$sql = "SELECT d.cod as cod, d.nome as nome FROM disciplinas d INNER JOIN professor_disciplina pd ON d.cod = pd.disciplina WHERE pd.professor = '$email';";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	while($row = $result->fetch_assoc()){
+	while($row = $result->fetch()){
 		$cod = md5( $private_key . md5($row['cod']) );
 		$disciplinas[ $cod ] = $row['nome'];
 	}

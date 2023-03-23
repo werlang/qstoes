@@ -1,31 +1,20 @@
 <?php
 
+$config = json_decode(file_get_contents('config.json'), true);
+$host = $config["mysql"]["host"];
+$user = $config["mysql"]["user"];
+$password = $config["mysql"]["password"];
+$database = $config["mysql"]["database"];
 
-	$servername = "localhost";
-	$username = "qstoes";
-	$password = "s0r3tmhr";
-	$database = "qstoes_";
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::MYSQL_ATTR_INIT_COMMAND => "SET sql_mode='TRADITIONAL'"
+];
 
-/*
-	//hostinger
-	$servername = "mysql.hostinger.com.br";
-	$username = "u709824322_admin";
-	$password = "s0r3tmhr";
-	$database = "u709824322_db";
-*/
-/*
-	//local
-	$servername = "127.0.0.1";
-	$username = "root";
-	$password = "";
-	$database = "id1824096_qstoes";
-*/
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $database);
-	mysqli_set_charset($conn,"utf8mb4");
-
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
-?>
+$conn = new PDO(
+    "mysql:host=$host;dbname=$database",
+    $user,
+    $password,
+    $options
+);

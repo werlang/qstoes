@@ -9,15 +9,15 @@
 
 	$sql = "SELECT escolhida FROM questoes WHERE cod = '$codq'";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	$row = $result->fetch_assoc();
+	$row = $result->fetch();
 	$ccod = $row['escolhida'];
 	
 	$sql = "SELECT * FROM resolucoes WHERE questao = '$codq' ORDER BY FIELD(cod,'$ccod') DESC, votos DESC, envio DESC";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
 	
-	if ($conn->affected_rows > 0){
+	if ($result->rowCount() > 0){
 		$msg = "";
-		while($row = $result->fetch_assoc()){
+		while($row = $result->fetch()){
 			$cod = $row['cod'];
 			if ($ccod == $cod)
 				$chosen = "class='chosen'";
@@ -39,7 +39,7 @@
 				finfo_close($finfo);
 				
 				if (strstr($mime, "text")){
-					$texto = htmlspecialchars(utf8_encode(file_get_contents($arquivo)),ENT_SUBSTITUTE, "utf-8");
+					$texto = file_get_contents($arquivo);
 				}
 				elseif (strstr($mime, "image")){
 					$texto = "<div class='img-container'><div class='img-resol'><img src='$arquivo'></div></div>";

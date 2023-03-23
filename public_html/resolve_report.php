@@ -23,7 +23,7 @@
 		}
 	}
 	else{
-		$mensagem = mysqli_real_escape_string($conn, $_POST['mensagem']);
+		$mensagem = $_POST['mensagem'];
 		$row = search_report();
 		$texto = $row['texto'];
 		$email = $row['email'];
@@ -46,7 +46,7 @@
 
 		$sql = "SELECT nome, titulo FROM professores WHERE email = '$user'";
 		if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-		$row = $result->fetch_assoc();
+		$row = $result->fetch();
 		$nome_prof = $row['nome'];
 		$titulo = $row['titulo'];
 		
@@ -61,6 +61,6 @@ function search_report(){
 	global $conn;
 	$sql = "SELECT * FROM denuncias WHERE cod = $cod";
 	if(!$result = $conn->query($sql)){ die('There was an error running the query [' . $conn->error . ']'); }
-	return $result->fetch_assoc();
+	return $result->fetch();
 }
 ?>
