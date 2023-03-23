@@ -32,10 +32,6 @@
         $msg = "
             <div id='container-titulo'>
                 <h1>$nome_lista</h1>
-                <div id='share-container'>
-                    <a href='https://twitter.com/share' class='twitter-share-button' data-url='$link' data-text='Qstoes - $nome_lista'>Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>		
-                    <div class='fb-share-button' data-href='$link' data-layout='button' data-size='small' data-mobile-iframe='true'><a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=$link&amp;src=sdkpreparse'>Compartilhar</a></div>
-                </div>
             </div>
             <ol class='rounded-list'>
         ";
@@ -51,8 +47,9 @@
             
             $sql2 = "SELECT arquivo FROM resolucoes WHERE questao = '$cod' ORDER BY votos DESC, envio LIMIT 1";
             if(!$result2 = $conn->query($sql2)){ die('There was an error running the query [' . $conn->error . ']'); }
-            $row2 = $result2->fetch();
-            $resolucao = $row2['arquivo'];
+            if ($row2 = $result2->fetch()) {
+                $resolucao = $row2['arquivo'];
+            }
             
             $imagem = $row['imagem'];
             if (isset($imagem))
@@ -83,6 +80,7 @@
                             <img src='icon/like.png'>
                             <div class='rating'>$elaboracao</div>
                         </div>
+                        <div class='bullet'><img src='icon/ellipsis.png'></div>
                     </div>
                 </div>
                 <div class='assuntos'>

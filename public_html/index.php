@@ -27,7 +27,8 @@
 	<link type='text/css' rel='stylesheet' href='css/inputs.css'/> 
 	<link type='text/css' rel='stylesheet' href='css/buttons.css'/> 
 	<link type='text/css' rel='stylesheet' href='css/popups.css'/> 
-	<link type='text/css' rel='stylesheet' href='css/tables.css'/> 
+	<link type='text/css' rel='stylesheet' href='css/tables.css'/>
+	<link type='text/css' rel='stylesheet' href='css/e-cards.css'/> 
 	<link type='text/css' rel='stylesheet' href='css/index.css'/> 
 	<script type="text/javascript" src="script/jquery.min.js"></script>
 	<script type="text/javascript" src="script/buttons.js"></script>
@@ -240,7 +241,7 @@
 
 	</div>
 	<div class='credits'>
-		<span>© 2020 qstoes.tk</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pswerlang@gmail.com'>pswerlang@gmail.com</a></span>
+		<span>© 2023 qstoes.tk</span>-<span>Pablo Werlang</span>-<span><a href='mailto:pablowerlang@ifsul.edu.br'>pablowerlang@ifsul.edu.br</a></span>
 	</div>
 </body>
 </html>

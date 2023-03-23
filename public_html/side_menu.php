@@ -25,32 +25,6 @@
 ?>
 <link type='text/css' rel='stylesheet' href='css/side_menu.css'/>
 <script type="text/javascript" src="script/side_menu.js"></script>
-<!-- facebook script -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- twitter script -->
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
 <div id='fog'></div>
 <div id='header-toggle'></div>
 <div id='side-menu-offset'></div>
@@ -98,10 +72,6 @@
     </div>
     <div id='side-menu-footer'>
         <div class='container'>
-            <div id='share-container'>
-                <div class="fb-like" data-href="https://www.facebook.com/qstoes/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Conheça o Qstoes - uma plataforma interativa que gerencia exercícios e suas resoluções &url=http://qstoes.tk">Tweet</a>
-            </div>
         </div>
     </div>
 </div>

@@ -88,19 +88,36 @@ $(document).ready ( function(){
                 }
 
                 //clicou em uma questao
-                $('.rounded-list li').click( function(){
-                    if (!$(this).hasClass('active')){
-                        cancela_alteracoes();
+                $('.rounded-list li .bullet').click( function(e){
+                    if (!$('.rounded-list li .bullet.active').length) {
+        
+                        $(".e-button-container").removeClass('visible');
+                        $('.rounded-list li .bullet').removeClass('active');
                         $('.rounded-list li').removeClass('active');
+                        $(this).closest('li').addClass('active');
                         $(this).addClass('active');
                         $('.e-button').removeClass('disabled');
                         $("#opcoes").addClass('visible');
+                        setTimeout(() => $("#opcoes").addClass('fade-in'), 10);
                         $('#resolucao img').removeClass('visible');
                         if ($(this).find('.code').html() != "")
                             $('#opcoes #resolucao .download').addClass('visible');
                         else
                             $('#opcoes #resolucao .upload').addClass('visible');
+            
+                        // place the menu on the button
+                        document.querySelector(".e-button-container").style.top = (e.pageY - 10) + "px";
+                        document.querySelector(".e-button-container").style.left = (e.pageX - 10) + "px";
                     }
+        
+                    // close menu when clicking outside of it
+                    document.addEventListener("click", function closeMenu(e) {
+                        if (e.target.closest(".bullet.active") === null) {
+                            $(".e-button-container").removeClass('visible fade-in');
+                            $('.rounded-list li .bullet').removeClass('active');
+                            document.removeEventListener("click", closeMenu);
+                        }
+                    });
                 });
             }
         });

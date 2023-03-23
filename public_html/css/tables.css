@@ -1,106 +1,106 @@
 
 .table {
-	display: block;
-	margin: auto;
-	width: 100%;
+    display: block;
+    margin: auto;
+    width: 100%;
 }
 .table .row {
-	display: flex;
-	align-items: stretch;
-	flex-wrap: wrap;
-	transition: box-shadow .4s;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    transition: box-shadow .4s;
 }
 .table .cell {
-	text-align: center;
-	padding: 13px 10px;
-	margin: 1px;
-	display: none;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	min-height: 35px;
+    text-align: center;
+    padding: 13px 10px;
+    margin: 1px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 35px;
 }
 .table .thead .cell {
-	background: linear-gradient(#c5351f,#e5553f);
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-	color: white;
-	font-weight: bold;
+    background: linear-gradient(#c5351f,#e5553f);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+    font-weight: bold;
 }
 .table .tbody .cell{
-	background-color: rgba(255,230,230,0.4);
-	border: 1px solid rgba(190,180,180,0.6);
+    background-color: rgba(255,230,230,0.4);
+    border: 1px solid rgba(190,180,180,0.6);
 }
 .table .tbody .row:hover {
-	background-color: #ccc;
-	cursor: pointer;
+    background-color: #ccc;
+    cursor: pointer;
 }
 .table .row.selected {
-	box-shadow: 0px 0px 15px 4px rgba(255,0,0,0.3) inset;
-	transition: box-shadow .4s;
+    box-shadow: 0px 0px 15px 4px rgba(255,0,0,0.3) inset;
+    transition: box-shadow .4s;
 }
 .table .row.ui-sortable-handle.selected .m-show {
-	background-image: url(../icon/up-down-arrow.png);
-	background-repeat: no-repeat;
-	background-size: 22px;
-	background-position: 0 center;
+    background-image: url(../icon/up-down-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 0 center;
 }
 @media screen and (max-width: 599px) {
-	.table .cell.m-show{
-		display: flex;
-	}
-	.table .row.selected .cell.m-show {
-		font-weight: bold;
-	}
-	.table .row.selected .cell:not(.m-show) {
-		display: inline;
-		justify-content: center;
-		padding: 5px;
-		position: relative;
-		padding-left: 145px;
-		white-space: pre-wrap;
-		word-wrap: break-word;
-	}
-	.table .row.selected .cell:not(.m-show):before {
-		content: attr(data-head);
-		background-color: #d5452f;
-		color: white;
-		font-weight: bold;
-		width: 130px;
-		margin-right: 15px;
-		padding: 5px;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+    .table .cell.m-show{
+        display: flex;
+    }
+    .table .row.selected .cell.m-show {
+        font-weight: bold;
+    }
+    .table .row.selected .cell:not(.m-show) {
+        display: inline;
+        justify-content: center;
+        padding: 5px;
+        position: relative;
+        padding-left: 145px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .table .row.selected .cell:not(.m-show):before {
+        content: attr(data-head);
+        background-color: #d5452f;
+        color: white;
+        font-weight: bold;
+        width: 130px;
+        margin-right: 15px;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media screen and (min-width: 600px) {
-	.table .cell{
-		display: flex;
-	}
-	.table .cell.t-hide{
-		display: none;
-	}
-	.table .row.ui-sortable-handle.selected .m-show {
-		background-position: 215px center;
-	}
+    .table .cell{
+        display: flex;
+    }
+    .table .cell.t-hide{
+        display: none;
+    }
+    .table .row.ui-sortable-handle.selected .m-show {
+        background-position: 215px center;
+    }
 }
 
 @media screen and (min-width: 900px) {
-	.table .cell {
-		padding: 5px 10px;
-	}
-	.table .tbody .cell {
-		padding: 5px 10px;
-	}
-	.table .cell.t-hide{
-		display: flex;
-	}
-	.table .row.ui-sortable-handle.selected .m-show {
-		background-position: 275px center;
-	}
+    .table .cell {
+        padding: 5px 10px;
+    }
+    .table .tbody .cell {
+        padding: 5px 10px;
+    }
+    .table .cell.t-hide{
+        display: flex;
+    }
+    .table .row.ui-sortable-handle.selected .m-show {
+        background-position: 275px center;
+    }
 }

@@ -1,0 +1,74 @@
+.e-card {
+    margin: 10px;
+    border: 1px solid #00000055;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.e-card img {
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.e-card a {
+    width: 100%;
+    text-align: center;
+}
+.e-card.disabled img {
+    filter: grayscale(100%) contrast(0%) brightness(1);
+}
+
+.e-button-container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 3px;
+    border: 1px solid #00000042;
+    transition: all .3s;
+    transform: scale(0); 
+    transform-origin: top;   
+    box-shadow: 0px 0px 5px 0px #00000042;
+}
+.e-button-container.visible {
+    z-index: 2;
+    display: flex;
+}
+.e-button-container.fade-in {
+    transform: scale(1);
+}
+.e-button {
+    flex: 1;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .3s;
+    color: #616161;
+}
+.e-button img {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+}
+.e-button.disabled img {
+    filter: grayscale(100%) contrast(0%);
+}
+@media screen and (min-width: 900px) {
+    .e-button {
+        background-color: rgba(255,255,255,.95);
+    }
+    .e-button:hover {
+        background-color: rgba(255,230,230,0.9);
+    }
+}

@@ -156,7 +156,7 @@
 	}
 	if (isset($_GET['teste']) && $_GET['teste'] == 'ok'){
 		$receivername = "Prof. Pablo";
-		$receiveremail = "pswerlang@gmail.com";
+		$receiveremail = "pablowerlang@ifsul.edu.br";
 		$msgbody = "testbody";
 		$assunto  = "subj test";
 	}

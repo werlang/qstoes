@@ -1,116 +1,97 @@
 #frame-wrapper{
-	margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 @media screen and (min-width: 600px) {
-	#frame-wrapper {
-		margin-bottom: 10px;
-	}
+    #frame-wrapper {
+        margin-bottom: 10px;
+    }
 }
 @media screen and (min-width: 900px) {
-	#frame {
-		width: 900px;
-	}
-}
-.e-card {
-	margin: 10px;
-	border: 1px solid black;
-	border-radius: 30px;
-	background-color: rgba(255,255,255,0.5);
-	box-shadow: 1px 1px 3px 0px black;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 5px;
-	cursor: pointer;
-}
-.e-card img {
-	height: 35px;
-	width: 35px;
-}
-.e-card.disabled img {
-	filter: grayscale(100%) contrast(0%);
+    #frame {
+        width: 900px;
+    }
 }
 #opcoes {
-	display: flex;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0,0,0,0.4);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
 }
 #opcoes .e-card {
-	flex: 1;
+    flex: 1;
 }
 @media screen and (min-width: 600px) {
-	#opcoes {
-		position: relative;
-		background-color: inherit;
-		margin-top: 20px;
-	}
+    #opcoes {
+        position: relative;
+        background-color: inherit;
+        margin-top: 20px;
+    }
 }
 
 .popup .dialog #link{
-	box-shadow: 0px 0px 5px 0px black inset;
-	word-wrap: break-word;
-	padding: 10px;
-	background-color: white;
-	border: 2px solid black;
-	margin: 0px;
-	color: red;
-	display: block;
-	text-align: center;
-	text-decoration: none;
+    box-shadow: 0px 0px 5px 0px black inset;
+    word-wrap: break-word;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0px;
+    color: red;
+    display: block;
+    text-align: center;
+    text-decoration: none;
 }
 
 .popup .dialog .container {
-	margin-top: 10px;
-	justify-content: space-between;
+    margin-top: 10px;
+    justify-content: space-between;
 }
 .popup .dialog button.button-red {
-	width: 80px;
+    width: 80px;
 }
 
 @media screen and (min-width: 600px) {
-	.table .cell{
-		width: 60px;
-	}
-	.table .tbody .row .cell:nth-of-type(1){
-		justify-content: flex-start;
-	}
-	.table .row .cell:nth-of-type(1){
-		width: 362px;
-	}
-	.popup .dialog button.button-red {
-		width: 150px;
-	}
+    .table .cell{
+        width: 60px;
+    }
+    .table .tbody .row .cell:nth-of-type(1){
+        justify-content: flex-start;
+    }
+    .table .row .cell:nth-of-type(1){
+        width: 362px;
+    }
+    .popup .dialog button.button-red {
+        width: 150px;
+    }
 }
 @media screen and (min-width: 900px) {
-	.table .cell {
-		width: 95px;
-	}
-	.table .row .cell:nth-of-type(1){
-		width: 363px;
-	}
+    .table .cell {
+        width: 95px;
+    }
+    .table .row .cell:nth-of-type(1){
+        width: 363px;
+    }
 }
 
 #container-pages {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 10px;
-	align-items: center;
-	background-color: rgba(120,120,120,.1);
-	padding: 5px;
-	border-radius: 5px;
-	font-size: 1.2rem;
-	font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    background-color: rgba(120,120,120,.1);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 #container-pages img {
-	height: 30px;
-	cursor: pointer;
+    height: 30px;
+    cursor: pointer;
 }
 #container-pages #prev {
-	margin-left: 15px;
+    margin-left: 15px;
 }
 #container-pages #next {
-	margin-right: 15px;
+    margin-right: 15px;
 }
