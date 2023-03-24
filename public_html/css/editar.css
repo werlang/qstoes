@@ -166,8 +166,28 @@
     margin-left: 15px;
     font-weight: bold;
 }
+#alteracoes {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #00000045;
+    opacity: 0;
+    transition: .5s opacity;
+}
+#alteracoes.fade-in {
+    opacity: 1;
+}
 #alteracoes .e-button {
     max-width: 200px;
+    justify-content: center;
+    margin: 2px 10px;
+}
+#alteracoes .e-button img {
+    margin: 0;
 }
 #alteracoes #texto {
     width: 100%;

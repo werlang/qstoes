@@ -109,22 +109,25 @@
             <div id='div-questoes'></div>
 
             <div id='opcoes' class='linha e-button-container'>
-                <div id='denuncia' class='e-button'>
-                    <span>Reportar</span>
-                    <img src='icon/exclam.png'>
+                <div id='texto' class='e-button'>
+                    <span>Alterar texto</span>
+                    <img src='icon/texto.png'>
+                </div>
+                <div id='assuntos' class='e-button'>
+                    <span>Alterar assuntos</span>
+                    <img src='icon/assuntos.png'>
+                </div>
+                <div id='imagem' class='e-button'>
+                    <span>Alterar imagem</span>
+                    <img src='icon/imagem.png'>
                 </div>
                 <div id='resolucao' class='e-button'>
-                    <span>Resolução</span>
-                    <img class='download' src='icon/bulb.png'>
-                    <img class='upload' src='icon/bulb_off.png'>
+                    <span>Alterar resoluções</span>
+                    <img src='icon/upload_round.png'>
                 </div>
-                <div id='avaliacao' class='e-button'>
-                    <span>Avaliar</span>
-                    <img src='icon/star.png'>
-                </div>
-                <div id='link' class='e-button'>
-                    <span>Questão</span>
-                    <img src='icon/link.png'>
+                <div id='apagar' class='e-button'>
+                    <span>Apagar questão</span>
+                    <img src='icon/x.png'>
                 </div>
             </div>
             <div id='alteracoes' class='linha e-button-container'>
