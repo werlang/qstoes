@@ -21,10 +21,10 @@
     $nome = $row['nome'];
     $sobrenome = $row['sobrenome'];
     $email = $row['email'];
-    $lattes = $row['lattes'];
-    $facebook = $row['facebook'];
-    $twitter = $row['twitter'];
-    $linkedin = $row['linkedin'];
+    // $lattes = $row['lattes'];
+    // $facebook = $row['facebook'];
+    // $twitter = $row['twitter'];
+    // $linkedin = $row['linkedin'];
     $instituicao = $row['instituicao'];
     
 ?>
@@ -73,17 +73,17 @@
                     <input type='email' id='email' name='email' class='red-input' placeholder='joao.silva@email.com' value='<?php echo $email; ?>' data-tooltip='Seu email será usado para realizar o login' readonly>
                 </div>
 
-                <div class='linha'>
+                <!-- <div class='linha'>
                     <label for='lattes'>Lattes:</label>
                     <input type='text' id='lattes' name='lattes' class='red-input' placeholder='AB1C2DE34F' value='<?php echo $lattes; ?>' readonly>
-                </div>
+                </div> -->
 
                 <div class='linha'>
                     <label for='instituicao'>Instituição:</label>
                     <input type='text' id='instituicao' name='instituicao' class='red-input' placeholder='Universidade Hipotética' value='<?php echo $instituicao; ?>' data-tooltip='A instituição de ensino você faz parte'>
                 </div>
                 
-                <div class='linha'>
+                <!-- <div class='linha'>
                     <label for='facebook'>Facebook:</label>
                     <input type='text' id='facebook' name='facebook' class='red-input' placeholder='face_user' value='<?php echo $facebook; ?>' data-tooltip='Seu usuário no facebook. EX: https://www.facebook.com/face_user'>
                 </div>
@@ -96,7 +96,7 @@
                 <div class='linha'>
                     <label for='linkedin'>LinkedIn:</label>
                     <input type='text' id='linkedin' name='linkedin' class='red-input' placeholder='linkedin_user' value='<?php echo $linkedin; ?>' data-tooltip='Seu usuário no linkedin. EX: https://br.linkedin.com/in/linkedin_user'>
-                </div>
+                </div> -->
                 
                 <div id='changepass' <?php if (!$resetpass) echo "hidden"; ?> >
                     <div class='linha'>

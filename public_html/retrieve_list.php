@@ -47,9 +47,8 @@
             
             $sql2 = "SELECT arquivo FROM resolucoes WHERE questao = '$cod' ORDER BY votos DESC, envio LIMIT 1";
             if(!$result2 = $conn->query($sql2)){ die('There was an error running the query [' . $conn->error . ']'); }
-            if ($row2 = $result2->fetch()) {
-                $resolucao = $row2['arquivo'];
-            }
+            $row2 = $result2->fetch();
+            $resolucao = isset($row2['arquivo']) ? $row2['arquivo'] : "";
             
             $imagem = $row['imagem'];
             if (isset($imagem))

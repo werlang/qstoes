@@ -298,7 +298,7 @@ function load_lista(){
                 $("#opcoes").addClass('visible');
                 setTimeout(() => $("#opcoes").addClass('fade-in'), 10);
                 $('#resolucao img').removeClass('visible');
-                if ($(this).find('.code').html() != "")
+                if ($(this).closest('li').find('.code').html() != "")
                     $('#opcoes #resolucao .download').addClass('visible');
                 else
                     $('#opcoes #resolucao .upload').addClass('visible');
