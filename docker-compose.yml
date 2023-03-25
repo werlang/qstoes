@@ -2,6 +2,7 @@ version: '3'
 services:
   mysql:
     image: mysql:8.0
+    restart: always
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
@@ -15,16 +16,13 @@ services:
     volumes:
       - ./public_html:/var/www/html
   nginx:
-    # image: nginx:1.23.3
     image: valian/docker-nginx-auto-ssl
     restart: always
     ports:
-        - "8080:80"
-        - "4433:443"
+        - "80:80"
+        - "443:443"
     volumes:
         - ./nginx:/etc/nginx/conf.d
-        # - ./app:/app
-        # - ./ssl:/etc/nginx/ssl
     environment:
         - SITES=${URL}=apache
         - FORCE_HTTPS=true
