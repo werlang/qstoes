@@ -2,6 +2,7 @@
 
 $config = json_decode(file_get_contents('config.json'), true);
 $host = $config["mysql"]["host"];
+$port = $config["mysql"]["port"];
 $user = $config["mysql"]["user"];
 $password = $config["mysql"]["password"];
 $database = $config["mysql"]["database"];
@@ -13,7 +14,7 @@ $options = [
 ];
 
 $conn = new PDO(
-    "mysql:host=$host;dbname=$database",
+    "mysql:host=$host:$port;dbname=$database",
     $user,
     $password,
     $options
